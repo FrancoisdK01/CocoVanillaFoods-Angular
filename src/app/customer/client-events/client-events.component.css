@@ -1,5 +1,5 @@
 .row-heading {
-  background-color: #B55933;
+  background-color: #dd7f8f;
   padding: 20px 0;
 }
 
@@ -19,8 +19,8 @@
 .event-card {
   transition: transform .2s;
   height: 100%;
-  border: 1px solid #B55933;
-  box-shadow: 0 0 15px 0 #B55933;
+  border: 1px solid #dd7f8f;
+  box-shadow: 0 0 15px 0 #dd7f8f;
   background-color: #f9f9f9;
 }
 
@@ -30,14 +30,14 @@
 
 .buy-button {
   border-radius: 0;
-  background-color: #B55933;
+  background-color: #dd7f8f;
   color: white;
   font-weight: bold;
   transition: background-color .2s;
 }
 
 .buy-button:hover {
-  background-color: #8c391f; /* Darker shade on hover */
+  background-color: #e3405a; /* Darker shade on hover */
 }
 
 .card-img-top {
@@ -65,7 +65,7 @@
 .price {
   font-size: 1.5em;
   font-weight: bold;
-  color: #B55933;
+  color: #e3405a;
 }
 
 
