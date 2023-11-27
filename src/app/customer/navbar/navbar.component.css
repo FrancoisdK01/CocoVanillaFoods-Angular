@@ -39,7 +39,7 @@
 }
 
 .navbar-toggler-icon {
-  background-color: #B55933;
+  background-color: #e9e0e5;
   width: 30px;
   height: 3px;
   display: block;
@@ -49,7 +49,7 @@
 .navbar-toggler-icon:before,
 .navbar-toggler-icon:after {
   content: '';
-  background-color: #B55933;
+  background-color: #e9e0e5;
   width: 30px;
   height: 3px;
   position: absolute;
@@ -73,6 +73,7 @@
 }
 
 .nav-link {
+  color: #efa3b0; /* This is a lighter shade of #e3405a, adjusted to be approximately 60% lighter */
   font-family: 'Cinzel Decorative', cursive;
   font-weight: 700;
 }
@@ -96,16 +97,19 @@
 }
 
 /* Common styles for the login button */
+
 .login-button {
-  display: inline-block;
-  padding: 10px 30px; /* Adjust the padding to make the button longer */
-  border: none;
-  border-radius: 20px; /* adjust the value based on the size you prefer */
-  color: white;
-  background-color: #B55933;
-  text-decoration: none;
-  font-family: 'Raleway Thin', sans-serif; /* Use Raleway Thin font */
+  background-color: #f47687; /* This is a lighter shade of #e3405a */
+  color: white; /* or any color that contrasts well with your lighter shade */
+  /* Other styling properties */
 }
+
+/* Define a :hover state for the same class */
+.login-button:hover {
+  background-color: #e3405a; /* Original color appears on hover */
+}
+
+
 /* Styles for the cylindrical shape */
 .login-button::before,
 .login-button::after {
@@ -115,7 +119,7 @@
   height: 100%;
   position: absolute;
   border-radius: 50%;
-  background-color: #B55933;
+  background-color: #e9e0e5;
   top: 0;
 }
 
@@ -153,7 +157,7 @@
 
 .login-button:hover {
   cursor: pointer;
-  background-color: #8f4426;
+  background-color: #e9e0e5;
 }
 
 
@@ -162,3 +166,22 @@
   margin: 0 3px;
   text-align: center;
 }
+
+/* Custom link styling */
+.custom-link, .custom-link:active, .custom-link:focus, .custom-link.routerLinkActive {
+  color: #efa3b0; /* This is a lighter shade of #e3405a, adjusted to be approximately 60% lighter */
+  text-decoration: none; /* Removes underline from links */
+  transition-duration: 0.4s; /* Smooth transition for hover effect */
+}
+
+/* Hover effect for custom links */
+.custom-link:hover {
+  color: #e3405a; /* Original color appears on hover */
+}
+
+
+/* Optional: Focus state for accessibility */
+/* .custom-link:focus {
+  outline: none; 
+  box-shadow: 0 0 0 2px rgba(227, 64, 90, 0.5); 
+} */

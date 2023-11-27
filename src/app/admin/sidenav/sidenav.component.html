@@ -3,17 +3,18 @@
   <button class="sidebar-toggle d-lg-none" type="button" (click)="toggleSidebar()">
     <i class="bi bi-list"></i>
   </button>
+  
   <ul class="nav nav-pills flex-column mb-auto">
-    <li class="nav-item" (click)="showWineSubnav = !showWineSubnav">
+    <!-- <li class="nav-item" (click)="showWineSubnav = !showWineSubnav">
       <a class="nav-link ">
         <i class="bi bi-basket me-2"></i>
         <span style="margin-top: 10px;">Wine</span>
         <i [class]="showWineSubnav ? 'bi bi-chevron-down ' : 'bi bi-chevron-right'" style="margin-left: 15px;"></i>
-      </a>
+      </a> -->
 
       
 <!-- UL with Wine Subnav -->
-<ul *ngIf="showWineSubnav" class="nav flex-column ml-3 sub-nav" [@dropdownAnimation]="showWineSubnav ? 'open' : 'closed'" aos="fade-up" (click)="toggleDropdown()">
+<!-- <ul *ngIf="showWineSubnav" class="nav flex-column ml-3 sub-nav" [@dropdownAnimation]="showWineSubnav ? 'open' : 'closed'" aos="fade-up" (click)="toggleDropdown()">
   <li class="nav-item" style="background-color: rgb(59, 59, 255);">
     <a class="nav-link" routerLink="/wine">
       <i class="fas fa-arrow-right float-left" style="margin-right: 7px;"></i>
@@ -38,30 +39,10 @@
       <span style="margin-left: 15px;">Discount</span>
     </a>
   </li>
-</ul>
- 
-    </li>
-    <li class="nav-item" (click)="showInventorySubnav = !showInventorySubnav">
-      <a class="nav-link">
-        <i class="bi bi-list-ol me-2"></i>
-        <span>Inventory</span>
-        <i [class]="showInventorySubnav ? 'bi bi-chevron-down' : 'bi bi-chevron-right'" style="margin-left: 15px;"></i>
-      </a>
-          <ul *ngIf="showInventorySubnav" class="nav flex-column ml-3 sub-nav">
-            <li class="nav-item" style="background-color: rgb(59, 59, 255);">
-              <a class="nav-link" routerLink="/inventory">
-                <i class="fas fa-arrow-right float-left" style="margin-right: 7px;"></i>
-                <span style="margin-left: 15px;">Inventory</span>
-              </a>
-            </li>
-            <li class="nav-item" style="background-color: rgb(59, 59, 255);">
-              <a class="nav-link" routerLink="/writeoff">
-                <i class="fas fa-arrow-right float-left" style="margin-right: 7px;"></i>
-                <span style="margin-left: 15px;">Write-Off Reasons</span>
-              </a>
-            </li>
-          </ul>
-      </li>
+</ul> -->
+    <!-- </li> -->
+
+
 
     <li class="nav-item" (click)="showEventSubnav = !showEventSubnav">
       <a class="nav-link">
@@ -97,9 +78,31 @@
     </a>
   </li>
 </ul>
-
     </li>
-    <li class="nav-item">
+
+    <li class="nav-item" (click)="showInventorySubnav = !showInventorySubnav">
+      <a class="nav-link">
+        <i class="bi bi-list-ol me-2"></i>
+        <span>Inventory</span>
+        <i [class]="showInventorySubnav ? 'bi bi-chevron-down' : 'bi bi-chevron-right'" style="margin-left: 15px;"></i>
+      </a>
+          <ul *ngIf="showInventorySubnav" class="nav flex-column ml-3 sub-nav">
+            <li class="nav-item" style="background-color: rgb(59, 59, 255);">
+              <a class="nav-link" routerLink="/inventory">
+                <i class="fas fa-arrow-right float-left" style="margin-right: 7px;"></i>
+                <span style="margin-left: 15px;">Inventory</span>
+              </a>
+            </li>
+            <li class="nav-item" style="background-color: rgb(59, 59, 255);">
+              <a class="nav-link" routerLink="/writeoff">
+                <i class="fas fa-arrow-right float-left" style="margin-right: 7px;"></i>
+                <span style="margin-left: 15px;">Write-Off Reasons</span>
+              </a>
+            </li>
+          </ul>
+      </li>
+
+    <!-- <li class="nav-item">
       <a class="nav-link" routerLink="/adminOrder" routerLinkActive="active">
         <i class="bi bi-cash me-2"></i>
         <span>Orders</span>
@@ -131,7 +134,8 @@
           </a>
         </li>
       </ul>
-    </li>
+    </li> -->
+
     <li class="nav-item">
       <a class="nav-link" routerLink="/blacklist" routerLinkActive="active">
         <i class="bi bi-x-circle me-2"></i>
@@ -139,12 +143,12 @@
       </a>
     </li>
 
-    <li class="nav-item">
+    <!-- <li class="nav-item">
       <a class="nav-link" routerLink="/refundrequest" routerLinkActive="active">
         <i class="bi bi-coin me-2"></i>
         <span>Refunds</span>
       </a>
-    </li>
+    </li> -->
 
     <!-- <li class="nav-item" (click)="showRefundSubnav = !showRefundSubnav">
       <a class="nav-link">
@@ -222,12 +226,14 @@
         Audit Logs
       </a>
     </li>
-    <li class="nav-item">
+
+    <!-- <li class="nav-item">
       <a class="nav-link" routerLink="/help" routerLinkActive="active">
         <i class="bi bi-question-circle me-2"></i>
         <span>Help</span>
       </a>
-    </li>
+    </li> -->
+    
     <li class="nav-item">
       <a class="nav-link" routerLink="/backup" routerLinkActive="active">
         <i class="bi bi-file-earmark-text-fill me-2"></i>

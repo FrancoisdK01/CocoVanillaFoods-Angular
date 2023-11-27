@@ -9,15 +9,15 @@ body, html {
 
 h1 {
   font-size: 4rem;
-  color: #B55933;
+  color: #e3405a;
   text-align: center;
-  text-decoration-color: #B55933;
+  text-decoration-color:  #e3405a;
 }
 
 .carousel-item img {
-  height: 700px;
+  height: 650px;
   object-fit: cover;
-  width: 100%;
+  width: 80%;
 }
 
 .image-overlay {
@@ -42,9 +42,11 @@ h1 {
 
 .image-overlay .overlay-text h1 {
   margin: 0;
-  color: #B55933;
+  color: #e3405a;
   text-align: center;
   font-size: 6em;
+  margin-bottom: 20px;
+
 }
 
 /* Media Queries for .overlay-text h1 */
@@ -163,4 +165,8 @@ h1 {
 
 .overlay-text {
   animation: fadeIn 2s;
+}
+
+#about-us-text h1 {
+  padding-top: 20px;
 }

@@ -10,28 +10,28 @@
   <div class="container d-flex align-items-center justify-content-between">
     <!-- Logo -->
     <a class="navbar-brand" routerLink="/clienthome">
-      <img src="/assets/promenadelogo.png" alt="Logo" height="60">
+      <img src="/assets/CocoVanillaFoods.png" alt="Logo" height="60">
     </a>
 
     <!-- Navbar Links for Mobile -->
     <ul class="d-lg-none d-flex ml-auto" style="list-style: none;">
       <!-- Cart Icon for Mobile -->
-      <li class="nav-item spaced-item">
+      <!-- <li class="nav-item spaced-item">
         <a class="nav-link" href="/cart" style="color: #B55933; font-size: 1.6rem;">
           <i class="bi bi-cart3"></i>
         </a>
-      </li>
+      </li> -->
 
       <!-- Login Button for Mobile -->
       <li class="nav-item spaced-item" *ngIf="!dataService.userValue?.username">
-        <a class="nav-link login-button" data-bs-toggle="modal" data-bs-target="#loginModal" style="color: #B55933;">
+        <a class="nav-link custom-link" data-bs-toggle="modal" data-bs-target="#loginModal" style="color:  #e3405a;">
           <span style="color: white;">Login</span>
         </a>
       </li>
 
       <!-- User Icon for Mobile -->
       <li class="nav-item spaced-item" *ngIf="dataService.userValue?.username">
-        <a class="nav-link" routerLink="/userinformation" style="color: #B55933; font-size: 1.6rem;">
+        <a class="nav-link custom-link" routerLink="/userinformation" style="color: #e3405a; font-size: 1.6rem;">
           <i class="bi bi-person-circle"></i> {{dataService.userValue?.username}}
         </a>
       </li>
@@ -43,71 +43,71 @@
         <!-- ... other links ... -->
         <!-- Home -->
         <li class="nav-item spaced-item">
-          <a class="nav-link" routerLink="/clienthome" routerLinkActive="active" style="color: #B55933;">Home</a>
+          <a class="nav-link custom-link" routerLink="/clienthome" routerLinkActive="active">Home</a>
         </li>
 
         <!-- About Us -->
         <li class="nav-item spaced-item">
-          <a class="nav-link" routerLink="/clientabout" style="color: #B55933;">About Us</a>
+          <a class="nav-link custom-link" routerLink="/clientabout">About Us</a>
         </li>
 
         <!-- Contact -->
         <li class="nav-item spaced-item">
-          <a class="nav-link" [routerLink]="'/clienthome'" fragment="contact-section" style="color: #B55933;">Contact</a>
+          <a class="nav-link custom-link" [routerLink]="'/clienthome'" fragment="contact-section">Contact</a>
 
           <!-- <a class="nav-link" [routerLink]="'/clienthome'" fragment="contact-section"
             style="color: #B55933;">Contact</a> -->
         </li>
 
         <!-- Wines -->
-        <li class="nav-item spaced-item wine-section">
+        <!-- <li class="nav-item spaced-item wine-section">
           <a class="nav-link wine-text" routerLink="/clientproducts" style="color: #B55933;">
             <span class="wine-icon d-lg-none"><i class="fas fa-wine-glass"></i></span>
-            <!-- This should appear on small screens -->
-            <span class="d-lg-inline d-none">Shop</span> <!-- This should appear on large screens -->
+            <span class="d-lg-inline d-none">Shop</span>
           </a>
-        </li>
+        </li> -->
 
         <!-- Events -->
         <li class="nav-item spaced-item events-section">
-          <a class="nav-link events-text" routerLink="/clientevents" style="color: #B55933;">
+          <a class="nav-link custom-link events-text" routerLink="/clientevents">
             <span class="events-icon d-lg-none"><i class="bi bi-calendar2-event"></i></span>
             <!-- This should appear on small screens -->
-            <span class="d-lg-inline d-none">Events</span> <!-- This should appear on large screens -->
+            <span class="d-lg-inline d-none">Bang vir bak</span> <!-- This should appear on large screens -->
           </a>
         </li>
 
         <!-- FAQ's -->
         <li class="nav-item spaced-item">
-          <a class="nav-link" routerLink="/customerfaq" style="color: #B55933;">FAQ</a>
+          <a class="nav-link custom-link" routerLink="/customerfaq">FAQ</a>
         </li>
 
-        <li class="nav-item spaced-item">
+        <!-- Donate Crypto -->
+        <!-- <li class="nav-item spaced-item">
           <a class="nav-link" routerLink="/donations" style="color: #B55933;">Donate</a>
-        </li>
+        </li> -->
 
         <!-- Admin Icon -->
         <li class="nav-item spaced-item" *ngIf="isAdmin()">
-          <a class="nav-link" routerLink="/wine" style="color: #B55933;">ADMIN</a>
+          <a class="nav-link custom-link" routerLink="/wine">ADMIN</a>
         </li>
 
         <!-- Cart Icon for Desktop -->
-        <li class="nav-item spaced-item" *ngIf="isLoggedIn()">
+        <!-- <li class="nav-item spaced-item" *ngIf="isLoggedIn()">
           <a class="nav-link" href="/cart" style="color: #B55933; font-size: 1.6rem;">
             <i class="bi bi-cart3"></i> <span>{{ itemCount }}</span>
           </a>
-        </li>
+        </li> -->
 
 
         <!-- User Icon for Desktop -->
         <li class="nav-item spaced-item" *ngIf="dataService.userValue?.username">
-          <a class="nav-link" routerLink="/userinformation" style="color: #B55933; font-size: 1.6rem;">
+          <a class="nav-link custom-link" routerLink="/userinformation" style="font-size: 1.6rem;">
             <i class="bi bi-person-circle"></i> {{dataService.userValue?.username}}
           </a>
         </li>
 
         <li class="nav-item spaced-item" *ngIf="!dataService.userValue?.username">
-          <div id="login-button" class="nav-link login-button" data-bs-toggle="modal" data-bs-target="#loginModal">
+          <div id="login-button custom-link" class="nav-link login-button" data-bs-toggle="modal" data-bs-target="#loginModal">
             <span style="color: white;">Login</span>
           </div>
         </li>
@@ -190,7 +190,7 @@
                 Two-Factor Code <i class="fas fa-question-circle" data-bs-toggle="tooltip" data-bs-placement="top"
                   title="Please enter the code sent to your email, it is a 6 digit code"></i>
               </label>
-              <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+              <span style="color: #f1c0c6; font-size: smaller; align-items: right;">* Required</span>
             </div>
             <!-- ... two-factor code input fields ... -->
             <div class="d-flex justify-content-between">
@@ -258,7 +258,7 @@
               <i class="fa fa-question-circle" data-bs-toggle="tooltip"
                 title="Choose an appropriate title from the dropdown."></i>
             </label>
-            <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+            <span style="color: #f1c0c6; font-size: smaller; align-items: right;">* Required</span>
           </div>
           <select class="form-control" id="title" required [(ngModel)]="title" name="title" #titleInput>
             <option value="" disabled selected>Select a title</option>
@@ -273,7 +273,7 @@
             <label for="firstName" class="form-label">First Name
               <i class="fa fa-question-circle" data-bs-toggle="tooltip" title="Enter your first name."></i>
             </label>
-            <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+            <span style="color:#f1c0c6; font-size: smaller; align-items: right;">* Required</span>
           </div>
           <input type="text" class="form-control" id="firstName" placeholder="Enter first name" required
             [(ngModel)]="firstName" name="firstName" #firstNameInput>
@@ -286,7 +286,7 @@
             <label for="lastName" class="form-label">Last Name
               <i class="fa fa-question-circle" data-bs-toggle="tooltip" title="Enter your last name."></i>
             </label>
-            <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+            <span style="color: #f1c0c6; font-size: smaller; align-items: right;">* Required</span>
           </div>
           <input type="text" class="form-control" id="lastName" placeholder="Enter last name" required
             [(ngModel)]="lastName" name="lastName" #lastNameInput required pattern="^[A-Za-z ]+$">
@@ -300,7 +300,7 @@
               <i class="fa fa-question-circle" data-bs-toggle="tooltip"
                 title="Enter a 10-digit phone number starting with 0."></i>
             </label>
-            <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+            <span style="color: #f1c0c6; font-size: smaller; align-items: right;">* Required</span>
           </div>
 
           <input type="text" class="form-control" id="phoneNumber" placeholder="Enter phone number"
@@ -316,7 +316,7 @@
             <label for="idNumber" class="form-label">ID Number
               <i class="fa fa-question-circle" data-bs-toggle="tooltip" title="Provide your 13-digit ID number."></i>
             </label>
-            <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+            <span style="color:#f1c0c6; font-size: smaller; align-items: right;">* Required</span>
           </div>
           <input type="text" class="form-control" id="idNumber" placeholder="Enter ID number" [(ngModel)]="idNumber"
             name="idNumber" required pattern="^[0-9]{13}$">
@@ -338,7 +338,7 @@
               <i class="fa fa-question-circle" data-bs-toggle="tooltip"
                 title="Choose your gender from the dropdown."></i>
             </label>
-            <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+            <span style="color:#f1c0c6; font-size: smaller; align-items: right;">* Required</span>
           </div>
           <select class="form-control" id="gender" required [(ngModel)]="gender" name="gender" #genderInput>
             <option value="" disabled selected>Select a gender</option>
@@ -354,7 +354,7 @@
               <i class="fa fa-question-circle" data-bs-toggle="tooltip"
                 title="Choose a display name for your account."></i>
             </label>
-            <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+            <span style="color: #f1c0c6; font-size: smaller; align-items: right;">* Required</span>
           </div>
           <input type="text" class="form-control" id="displayName" placeholder="Enter display name" required
             [(ngModel)]="displayName" name="displayName" #displayNameInput>
@@ -367,7 +367,7 @@
             <label for="email" class="form-label">Email address
               <i class="fa fa-question-circle" data-bs-toggle="tooltip" title="Provide a valid email address."></i>
             </label>
-            <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+            <span style="color: #f1c0c6; font-size: smaller; align-items: right;">* Required</span>
           </div>
           <input type="email" class="form-control" id="remail" placeholder="Enter email" required [(ngModel)]="remail"
             name="remail" #remailInput pattern="^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
@@ -383,7 +383,7 @@
               <i class="fa fa-question-circle" data-bs-toggle="tooltip"
                 title="Your password should have at least 1 uppercase, 1 lowercase, 1 non-alphanumeric character, 1 digit and be between 8-100 characters."></i>
             </label>
-            <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+            <span style="color: #f1c0c6; font-size: smaller; align-items: right;">* Required</span>
           </div>
           <div class="input-group">
             <input type="{{ showPassword ? 'text' : 'password' }}" class="form-control" id="rpassword"
@@ -414,7 +414,7 @@
               <i class="fa fa-question-circle" data-bs-toggle="tooltip"
                 title="Confirm the password you entered above."></i>
             </label>
-            <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+            <span style="color: #f1c0c6; font-size: smaller; align-items: right;">* Required</span>
           </div>
           <div class="input-group">
             <input type="password" class="form-control" id="confirmPassword" placeholder="Confirm password"
@@ -465,7 +465,7 @@
               <i class="fa fa-question-circle" data-bs-toggle="tooltip"
                 title="Please enter a valid email address to receive the reset link."></i>
             </label>
-            <span style="color: #ff6666; font-size: smaller; align-items: right;">* Required</span>
+            <span style="color: #f1c0c6; font-size: smaller; align-items: right;">* Required</span>
           </div>
 
           <input type="email" class="form-control" id="forgotPasswordEmail" placeholder="Enter your email" required
