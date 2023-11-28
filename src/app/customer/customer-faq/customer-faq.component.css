@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Hind:300,400&display=swap');
 
 .row-heading {
-  background-color: #B55933;
+  background-color: #dd7f8f;
   padding: 20px 0;
 }
 
@@ -53,14 +53,14 @@ body {
 
 .accordion button:hover,
 .accordion button:focus {
-  color: #B64A33;
+  color: #e3405a;
 }
 
 .accordion button:hover::after,
 .accordion button:focus::after {
   cursor: pointer;
-  color: #B64A33;
-  border: 1px solid #B64A33;
+  color: #e3405a;
+  border: 1px solid  #e3405a;
 }
 
 .accordion-title {
@@ -101,7 +101,7 @@ body {
 }
 
 .accordion button[aria-expanded='true'] {
-  color: #B64A33;
+  color: #dd7f8f;
 }
 
 .accordion button[aria-expanded='true'] .icon::after {
